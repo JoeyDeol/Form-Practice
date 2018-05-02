@@ -1,0 +1,46 @@
+@mixin remCalc($fontSize) {
+    font-size: ($fontSize / 16) * 1rem;
+}
+
+html {
+    font-size: 100%; /*Default font-size is 16px*/
+}
+
+body {
+    margin: 0 auto;
+}
+
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+fieldset {
+    margin: 0px; 
+    padding: 0px;
+    border: none;
+}
+
+input {
+    border: none;
+    // background: none;
+    // color: inherit;
+}
+
+select {
+    margin: 0px; 
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
