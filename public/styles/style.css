@@ -185,7 +185,8 @@ p {
     font-size: 1rem; }
 
 .subscribe__form fieldset {
-  margin-bottom: 20px; }
+  margin-bottom: 50px;
+  position: relative; }
 
 .subscribe__form input {
   width: 55%;
@@ -197,8 +198,17 @@ p {
 .subscribe__form select {
   width: 40%;
   height: 56px;
-  padding: 15px 0px;
-  color: #7b7b7b; }
+  background-color: white; }
+  .subscribe__form select option {
+    color: #7b7b7b;
+    background-color: white; }
+
+.subscribe__form label {
+  position: absolute;
+  bottom: -30px;
+  display: none;
+  color: #C24728;
+  font-size: 1rem; }
 
 .subscribe__form .submit-button {
   width: 100%;
@@ -206,6 +216,9 @@ p {
   border-radius: 5px;
   background-color: #5c6ac4;
   color: inherit; }
+
+.subscribe__form .invalid__email {
+  display: block; }
 
 body {
   max-width: 1440px;

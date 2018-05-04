@@ -30,7 +30,8 @@
 
 .subscribe__form {
     fieldset {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        position: relative;
     }
     input {
         width: 55%;
@@ -42,8 +43,18 @@
     select {
         width: 40%;
         height: 56px;
-        padding: 15px 0px;
-        color: #7b7b7b;
+        background-color: white;
+        option {
+            color: #7b7b7b;
+            background-color: white;
+        }    
+    }
+    label {
+        position: absolute;
+        bottom: -30px;
+        display: none;
+        color: #C24728;
+        @include remCalc(16); 
     }
     .submit-button {
         width: 100%;
@@ -52,4 +63,8 @@
         background-color: #5c6ac4; 
         color: inherit;
     }
+    .invalid__email {
+        display: block;
+    }
 }
+
