@@ -19,7 +19,7 @@
                 <form action="" class="subscribe__form">
                     <fieldset class="subscribe__form__emailSubmit">
                         <input type="email" name="email-submit" placeholder="Email Address" required>
-                        <select required>
+                        <select>
                             <option value="Placeholder" disabled selected hidden>Interested in...</option>
                             <option value="Events">Events</option>
                             <option value="Marketing">Marketing</option>
@@ -29,7 +29,7 @@
                         </select>
                         <label for="email-subtmit" class="invalid__email">Please enter a valid email address</label>
                     </fieldset>
-                    <input type="submit" name="" id="" value="Sign up now" class="submit-button">
+                    <input type="submit" name="submitEmail" id="submit-email-button" value="Sign up now" onsubmit="return shopifyNewsletter.validateMyForm()" class="submit-button">
                 </form>
             </div>
         </section>
