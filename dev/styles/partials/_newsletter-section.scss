@@ -28,7 +28,7 @@
 
 .subscribe__form {
     fieldset {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         position: relative;
     }
     input {
@@ -54,15 +54,28 @@
         color: #C24728;
         @include remCalc(16); 
     }
-    .submit-button {
-        width: 100%;
-        padding: 15px 0px;
-        border-radius: 5px;
-        background-color: #5c6ac4; 
-        color: inherit;
-    }
     .invalid__email {
         display: block;
     }
+    .subscribe__form__button {
+        .submit__button {
+            width: 100%;
+            padding: 15px 0px;
+            border-radius: 5px;
+            background-color: #5c6ac4; 
+            color: inherit;
+        }
+        .https__request {
+            width: 100%;
+            padding: 15px 0px;
+            border-radius: 5px;
+            background-color: #5c6ac4; 
+            color: inherit;
+        }
+    }
+}
+
+.form__submitted {
+    display: none;
 }
 

@@ -185,7 +185,7 @@ p {
     font-size: 1rem; }
 
 .subscribe__form fieldset {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative; }
 
 .subscribe__form input {
@@ -210,15 +210,25 @@ p {
   color: #C24728;
   font-size: 1rem; }
 
-.subscribe__form .submit-button {
+.subscribe__form .invalid__email {
+  display: block; }
+
+.subscribe__form .subscribe__form__button .submit__button {
   width: 100%;
   padding: 15px 0px;
   border-radius: 5px;
   background-color: #5c6ac4;
   color: inherit; }
 
-.subscribe__form .invalid__email {
-  display: block; }
+.subscribe__form .subscribe__form__button .https__request {
+  width: 100%;
+  padding: 15px 0px;
+  border-radius: 5px;
+  background-color: #5c6ac4;
+  color: inherit; }
+
+.form__submitted {
+  display: none; }
 
 body {
   max-width: 1440px;

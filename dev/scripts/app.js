@@ -10,11 +10,12 @@ shopifyNewsletter.validateMyForm = () => {
         e.preventDefault();
         const email = $("input[type='email']").val();
         if (shopifyNewsletter.validateUserEmail(email) == false) {
-            $('label').addClass('invalid__email');
+            $('label').toggleClass('invalid__email');
             return false;
         } else {
             shopifyNewsletter.getUserInfo();
             shopifyNewsletter.httpSimulation()
+            $('label').removeClass('invalid__email');
             return true
         }
     })
@@ -34,7 +35,25 @@ shopifyNewsletter.getUserInfo = () => {
 }
 
 shopifyNewsletter.httpSimulation = () => {
-    console.log('SUBMITTED')
+    $('.subscribe__form__button').html(`
+        <input type="submit" name="httpsRequest" value="Submitting..." disabled="disabled" class="https__request"></input>       
+        `);
+    shopifyNewsletter.vanishForm();
+}
+
+shopifyNewsletter.vanishForm = () => {
+    let vanish = $('form');
+    setTimeout(() => {
+        vanish.addClass('form__submitted')
+        shopifyNewsletter.thankYou();
+    }, 2000);
+}
+
+shopifyNewsletter.thankYou = () => {
+    $('.newsletter__signUp__subscribe').html(`
+        <h3>Thanks for subscribing</h3>
+        <p>You'll start receiving free tips and resources soon.</p>
+    `)
 }
 
 shopifyNewsletter.init = function () {
